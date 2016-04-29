@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>CIS 197 Asset Sentiment Analysis</title>
+        <script src="lib/jquery-1.11.3.min.js"></script>
+        <script src="lib/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/handlebars.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/socket.io.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/bootstrap.min.js"></script>
+        <script src="bower_components/jqcloud2/dist/jqcloud.min.js"></script>
+        <script src="lib/chart.js" type="text/javascript" charset="utf-8"></script>
+
+        <link rel="stylesheet" href="../bower_components/jqcloud2/dist/jqcloud.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+        
+        <script src="graph.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-lg-offset-2" id="app-container">
+                    <h1 align="center">CIS 197 Asset Sentiment Analysis</h1>
+                    <hr/>
+                    <div id="search-div" class="col-md-6  col-md-offset-3">
+                        <input type="text" name="search" class="search form-control" value="" autocomplete="off" id="search-bar" placeholder="Search for..."/>
+                    </div><br><br>
+                    <div id="load" style='width: 500px; margin: 40 auto; display: none'>
+                        <img src='views/loading.gif' style='width: 500px;'>
+                    </div>
+                    <div id="listing" class="row" style='margin: 40 auto'>
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <div><span id="name" class="single-stock symbol"></span> <span id="sent" class="single-stock price"></span></div>
+                        </div>
+                    </div>
+                    <canvas id="graph" width="500" height="250" style='margin: 10 auto'></canvas>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
